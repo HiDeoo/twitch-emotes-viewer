@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>Twitch Emotes Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+
+    <input type="text" class="input" id="emoteUrlInput" placeholder="Paste emote URL..." />
+
+    <div class="chat">
+      <div class="chat-messages">
+        <ul class="chat-lines">
+          <div class="chat-line">
+            <span class="timestamp"><small>20:21</small></span>
+            <span class="badges">
+              <div class="subscriber badge" title="Channel Subscriber"></div>
+              <div class="twitch-bits-1000 badge" title="cheer1000"></div>
+            </span>
+            <span style="color: #1E90FF;" class="from">Someone</span>
+            <span class="colon">:</span>&nbsp;
+            <span class="message">i love PHP <img class="emoticon" src="https://static-cdn.jtvnw.net/emoticons/v1/12/1.0"> </span>
+          </div>
+          <div class="chat-line">
+            <span class="timestamp"><small>20:22</small></span>
+            <span class="badges">
+            </span>
+            <span style="color: #ff5011;" class="from">Somebody</span>
+            <span class="colon">:</span>&nbsp;
+            <span class="message">What language is this? </span>
+          </div>
+          <div class="chat-line">
+            <span class="timestamp"><small>20:23</small></span>
+            <span class="badges">
+              <div class="subscriber badge" title="Channel Subscriber"></div>
+              <div class="twitch-bits-1 badge" title="cheer1"></div>
+              <div class="twitch-premium-1 badge"></div>
+            </span>
+            <span style="color: #ff2592;" class="from">John Doe</span>
+            <span class="colon">:</span>&nbsp;
+            <span class="message">Sublime is the best! <img class="emoticon customEmote" src="https://static-cdn.jtvnw.net/emoticons/v1/12/1.0"></span>
+          </div>
+        </ul>
+      </div>
+
+      <div class="chat-messages chat">
+        <ul class="chat-lines">
+          <div class="chat-line">
+            <span class="timestamp"><small>20:21</small></span>
+            <span class="badges">
+              <div class="subscriber badge" title="Channel Subscriber"></div>
+              <div class="twitch-bits-1000 badge" title="cheer1000"></div>
+            </span>
+            <span style="color: #1E90FF;" class="from">Someone</span>
+            <span class="colon">:</span>&nbsp;
+            <span class="message">i love PHP <img class="emoticon" src="https://static-cdn.jtvnw.net/emoticons/v1/12/1.0"> </span>
+          </div>
+          <div class="chat-line">
+            <span class="timestamp"><small>20:22</small></span>
+            <span class="badges">
+            </span>
+            <span style="color: #ff5011;" class="from">Somebody</span>
+            <span class="colon">:</span>&nbsp;
+            <span class="message">What language is this? </span>
+          </div>
+          <div class="chat-line">
+            <span class="timestamp"><small>20:23</small></span>
+            <span class="badges">
+              <div class="subscriber badge" title="Channel Subscriber"></div>
+              <div class="twitch-bits-1 badge" title="cheer1"></div>
+              <div class="twitch-premium-1 badge"></div>
+            </span>
+            <span style="color: #ff2592;" class="from">John Doe</span>
+            <span class="colon">:</span>&nbsp;
+            <span class="message">Sublime is the best! <img class="emoticon customEmote" src="https://static-cdn.jtvnw.net/emoticons/v1/12/1.0"></span>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function emoteUrlHandler(event) {
+        var customEmotes = document.getElementsByClassName('customEmote');
+
+        for(var i = 0; i < customEmotes.length; i++) {
+          customEmotes[i].src = event.target.value;
+        }
+      }
+
+      var emoteUrlInput = document.getElementById('emoteUrlInput');
+      emoteUrlInput.oninput = emoteUrlHandler;
+    </script>
+  </body>
+</html>
