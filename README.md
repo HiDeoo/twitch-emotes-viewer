@@ -1,6 +1,6 @@
 # Twitch Emotes Viewer
 
-Tool letting Twitch partners checking how their subscriber icon & emotes would render on Twitch default theme and BetterTTV Dark Mode before submitting them.
+Tool letting Twitch partners check how their subscriber icon & emotes would render on Twitch default theme and BetterTTV Dark Mode before submitting them.
 
 You can use it directly on [this page](https://hideoo.github.io/twitch-emotes-viewer).
 
